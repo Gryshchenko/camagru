@@ -4,7 +4,8 @@ div.form_login_position#login
     p
       input(onchange='close_error_message_login()', name='usernamelogin', required='required', type='text', placeholder='Username').js_login_user
     p
-      input(onchange='close_error_message_login()', name='passwordlogin', required='required', type='password', placeholder='eg. X8df!90EO').js_login_pass
+      input(onchange='close_error_message_login()', name='passwordlogin', required='required', type='password', placeholder='Min 8, at least 1 letter up and low and 1 number').js_login_pass
+    a(href='#', onclick='fogot_password()')#fogot_password_link.fogot_password Forgot password ?
     span.js_login_error_active.error_message_style You should activate your account
     span.js_login_error_pass.error_message_style Wrong password of login please try again
     p

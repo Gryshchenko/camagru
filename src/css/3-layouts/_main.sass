@@ -27,13 +27,18 @@ $video_background: #7f878a
 
 .profile
   display: none
+  margin: auto
   position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
   width: 90%
   height: 90%
-  top: 5%
-  right: 5%
-  border: 1px solid $border_color
-  background-color: $input_background
+  border: 1px solid #7f878a
+  background-color: #e8e1d7
+  flex-direction: column
+  max-width: 600px
 
 .profile_background
   display: none
@@ -70,6 +75,10 @@ $video_background: #7f878a
   align-items: center
   justify-content: space-around
   font-family: 'Tajawal', sans-serif
+  overflow: auto
+
+.social_comment
+  padding: 1%
 
 .button_border
   border: 1px solid $border_color
@@ -79,6 +88,10 @@ $video_background: #7f878a
 
 .profile_user_form
   height: 90%
+
+._form_mail_text
+  font-family: 'Tajawal', sans-serif
+  font-size: 15px
 
 .change_value_sections
   height: 25%
@@ -103,14 +116,19 @@ $video_background: #7f878a
   color: $error_message
 
 .camera
-    display: none
-    position: absolute
-    width: 90%
-    height: 90%
-    top: 5%
-    right: 5%
-    border: 1px solid $border_color
-    background-color: $input_background
+  display: none
+  position: absolute
+  margin: auto
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  border: 1px solid $border_color
+  background-color: $input_background
+  max-width: 1400px
+  width: 100%
+  max-height: 650px
+  height: 100%
 
 video
   position: relative
@@ -122,7 +140,7 @@ canvas
   display: none
 
 .camera_data
-  height: 90%
+  height: 100%
   display: flex
   flex-direction: column
   justify-content: space-between
@@ -139,14 +157,21 @@ canvas
   justify-content: space-around
 
 .makephoto_button
-    font-family: 'Tajawal', sans-serif
-    text-decoration: none
-    color: black
-    border: 1px solid $border_color
-    padding: 10px 10px
-    margin: 10px 10px
-    width: 100px
-    text-align: center
+  font-family: 'Tajawal', sans-serif
+  text-decoration: none
+  color: black
+  border: 1px solid $border_color
+  padding: 10px 10px
+  margin: 10px 10px
+  width: 100px
+  text-align: center
+
+.makephoto_button_input
+  height: 20px
+  display: none
+
+input[type="file"]
+  display: none
 
 .control_button_link
   display: flex
@@ -154,12 +179,36 @@ canvas
 
 .images
   display: flex
-  flex-direction: row
-  flex-wrap: wrap
   align-content: center
-  max-width: 640px
-  max-height: 480px
-  padding: 1%
+  border: 1px solid $border_color
+  overflow: auto
+  overflow-y: hidden
+  margin-bottom: 2%
+
+.img_block
+  display: flex
+  flex-direction: column
+
+.img_user_photos
+  margin: 1%
+
+.img_user_photos:hover,
+.img_user_photos:active,
+  opacity: 0.4
+  transition: opacity 0.3s
+  background-image: url('../img/remove.png')
+
+.user_photos
+  display: flex
+  border: 1px solid $border_color
+  overflow: auto
+  overflow-y: hidden
+
+.images::-webkit-scrollbar
+  width: 12px
+
+.images::-webkit-scrollbar-thumb
+  border: 1px solid #7f878a
 
 .img_style
   width: 50px
@@ -180,9 +229,198 @@ canvas
 .makephoto_block
   display: block
 
+.photo
+  width: 98%
+  height: 100%
+  display: flex
+  justify-content: space-between
+  flex-direction: column
+  overflow: hidden
+
+.photos_block
+  width: 600px
+
+.user_photos::-webkit-scrollbar
+  width: 12px
+
+.user_photos::-webkit-scrollbar-thumb
+  border: 1px solid #7f878a
+
+.img_user_photos
+  width: 200px
+  height: 150px
+
+.pagination_block
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-around
+  overflow-x: auto
+  width: 98%
+
+.pagination_block::-webkit-scrollbar
+  width: 12px
+
+.pagination_block::-webkit-scrollbar-thumb
+  border: 1px solid #7f878a
+
+.user_img_style
+  display: flex
+  flex-wrap: wrap
+  height: 100%
+
+.img_block
+  width: 270px
+  height: 300px
+  padding: 1%
+
+.img_global_style
+  height: 250px
+  width: 270px
+  //padding: 2%
+  border: 1px solid $border_color
+
+.pagination
+  display: flex
+  height: 25px
+  justify-content: flex-start
+  margin: 15px
+
+.page_style
+  width: 75px
+  height: 15px
+
+.social_block
+  display: flex
+  justify-content: space-between
+  align-items: center
+  font-family: 'Tajawal', sans-serif
+  margin: 10px 0
+
+.social_like_quantity
+  padding: 0 10px
+
+.social_like,
+.social_like_quantity
+  color: black
+
+.social_like
+  height: 25px
+  position: relative
+
+.active
+  height: 15px
+  transition: height 0.2s ease-out
+
+.comments
+  display: none
+  margin: auto
+  position: absolute
+  top: 0
+  left: 0
+  bottom: 0
+  right: 0
+  width: 90%
+  height: 90%
+  border: 1px solid #7f878a
+  background-color: #e8e1d7
+  flex-direction: column
+  max-width: 800px
+
+.comments_close
+  display: flex
+  justify-content: space-between
+
+.comments_text_style
+  margin: 2%
+  font-family: 'Tajawal', sans-serif
+
+.comment_form
+  display: flex
+  flex-direction: column
+  align-items: center
+  padding-top: 0
+  padding-bottom: 0
+
+.comment_textarea
+  background-color: #aea9a1
+  max-width: 100%
+  width: 600px
+  height: 100px
+
+.comment_button_block
+  text-align: center
+
+.comment_button
+  margin: 10px 0
+  border: 1px solid $border_color
+  height: 40px
+  width: 232px
+
+.comment_photo
+  text-align: center
+  padding: 30px 30px 0 30px
+
+.comment_photo_img
+  max-width: 100%
+  height: auto
+
+.comment
+  margin: 1% 6% 0 13%
+  border: 1px solid $border_color
+
+.comments_user
+  text-align: center
+  max-width: 100%
+  overflow: auto
+  margin: 0 5% 1% 0
+  overflow-x: none
+
+.input_display
+  display: none !important
+
+.lable_flex
+  display: flex
+
+.custom-file-upload
+    border: 1px solid #ccc
+    display: inline-block
+    padding: 6px 12px
+    cursor: pointer
+
+.comments_user::-webkit-scrollbar
+  width: 12px
+
+.comments_user::-webkit-scrollbar-thumb
+  border: 1px solid #7f878a
+
+.comments_user_data
+  display: flex
+  justify-content: space-between
+
+.comments_user_text
+  width: 600px
+  max-width: 100%
+  overflow-wrap: break-word
+
+.comments_text_data
+  display: flex
+
+.comment_add
+  height: 25%
+  text-align: center
+  color: green
+
+.js_comment_add
+  display: none
+
 @media screen and (max-width: 1224px)
-  video
-    max-width: 250px
+  video,
+  canvas,
+  .upload_img
+    max-width: 425px
+
+  .comments_overflow
+    overflow: auto
 
   .img_style
     width: 30px
@@ -190,27 +428,63 @@ canvas
     padding: 3px
     margin: 3px
 
+  .photos_block
+    max-width: 270px
+
+  .images::-webkit-scrollbar
+    width: 0px
+
+  .images::-webkit-scrollbar-thumb
+    border: none
+
+  .images
+    margin-bottom: 2%
+
 @media (min-width: 768px) and (max-width: 979px)
   .camera_view
     flex-wrap: nowrap
     padding: 0 1%
 
+  .comments
+    font-size: 11px
+    overflow: auto
 
 @media screen and (max-width: 767px)
-  video
-    max-width: 250px
+  video,
+  canvas,
+  .upload_img
+    max-width: 300px
 
   .img_style
     width: 25px
     height: 25px
 
+  .gallery
+    width: 95%
+
+  form
+    padding: 0px 30px 0px 30px
+
+  .makephoto_button
+    padding: 5px 5px
+    margin: 10px 10px
+    font-size: 15px
+
+
 @media screen and (max-width: 600px)
-  video
+  video,
+  canvas,
+  .upload_img
     max-width: 240px
 
   .img_style
     width: 18px
     height: 18px
+
+  .img_user_photos
+    width: 150px
+    height: 110px
+
 
 @media screen and (max-width: 479px)
   .img_style
@@ -220,5 +494,16 @@ canvas
   .camera_view
     flex-wrap: wrap
 
-  video
+  video,
+  canvas,
+  .upload_img
     max-width: 270px
+
+  .comments
+    overflow: none
+
+  .comment_textarea
+    height: 50px
+
+  .comment
+    border: none
