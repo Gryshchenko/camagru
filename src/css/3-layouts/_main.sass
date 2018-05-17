@@ -1,0 +1,224 @@
+$border_color: #7f878a
+$input_background: #e8e1d7
+$video_background: #7f878a
+
+@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700')
+
+.gallery
+  width: 100%
+  height: 100%
+  background-color: $input_background
+  border: 1px solid $border_color
+  margin: 10px
+  display: flex
+  flex-direction: column
+
+.user_show
+  text-align: right
+  margin: 10px
+  display: flex
+  align-content: right
+  justify-content: flex-end
+
+.user_text_style
+  padding: 10px
+  margin: 10px
+  font-family: 'Tajawal', sans-serif
+
+.profile
+  display: none
+  position: absolute
+  width: 90%
+  height: 90%
+  top: 5%
+  right: 5%
+  border: 1px solid $border_color
+  background-color: $input_background
+
+.profile_background
+  display: none
+  width: 100%
+  height: 100%
+  background-color: black
+  position: absolute
+  opacity: 0.7
+  filter: blur(25px)
+
+.prifle_data
+  display: flex
+  flex-direction: column
+  height: 100%
+  width: 100%
+
+.link_close
+  display: flex
+  justify-content: space-between
+  font-family: 'Tajawal', sans-serif
+
+.link_underline
+  text-decoration: none
+  color: black
+
+.title_profile,
+.link_underline
+  margin: 2%
+
+.profile_user
+  display: flex
+  height: 100%
+  width: 100%
+  align-items: center
+  justify-content: space-around
+  font-family: 'Tajawal', sans-serif
+
+.button_border
+  border: 1px solid $border_color
+
+.text_margin
+  margin: 100% 0
+
+.profile_user_form
+  height: 90%
+
+.change_value_sections
+  height: 25%
+  text-align: center
+  color: green
+
+.js_change_value_login,
+.js_change_value_mail,
+.js_change_value_pass
+  display: none
+
+.js_change_value_pass_not_found,
+.js_change_value_pass_not_eql,
+.js_change_value_pass_old_not_found,
+.js_change_value_mail_found,
+.js_change_value_user_found
+  display: none
+
+.change_value_style
+  font-family: 'Tajawal', sans-serif
+  font-size: 0.8em
+  color: $error_message
+
+.camera
+    display: none
+    position: absolute
+    width: 90%
+    height: 90%
+    top: 5%
+    right: 5%
+    border: 1px solid $border_color
+    background-color: $input_background
+
+video
+  position: relative
+
+#videoElement
+  display: block
+
+canvas
+  display: none
+
+.camera_data
+  height: 90%
+  display: flex
+  flex-direction: column
+  justify-content: space-between
+
+.camera_view
+  justify-content: space-around
+
+.camera_view,
+.control_button
+  display: flex
+  flex-wrap: wrap
+
+.control_button
+  justify-content: space-around
+
+.makephoto_button
+    font-family: 'Tajawal', sans-serif
+    text-decoration: none
+    color: black
+    border: 1px solid $border_color
+    padding: 10px 10px
+    margin: 10px 10px
+    width: 100px
+    text-align: center
+
+.control_button_link
+  display: flex
+  justify-content: space-around
+
+.images
+  display: flex
+  flex-direction: row
+  flex-wrap: wrap
+  align-content: center
+  max-width: 640px
+  max-height: 480px
+  padding: 1%
+
+.img_style
+  width: 50px
+  height: 50px
+  padding: 5px
+  margin: 5px
+
+.active_img
+  border: 1px solid $border_color
+
+#video_container
+  position: relative
+  overflow: hidden
+
+.makephoto_none
+  display: none
+
+.makephoto_block
+  display: block
+
+@media screen and (max-width: 1224px)
+  video
+    max-width: 250px
+
+  .img_style
+    width: 30px
+    height: 30px
+    padding: 3px
+    margin: 3px
+
+@media (min-width: 768px) and (max-width: 979px)
+  .camera_view
+    flex-wrap: nowrap
+    padding: 0 1%
+
+
+@media screen and (max-width: 767px)
+  video
+    max-width: 250px
+
+  .img_style
+    width: 25px
+    height: 25px
+
+@media screen and (max-width: 600px)
+  video
+    max-width: 240px
+
+  .img_style
+    width: 18px
+    height: 18px
+
+@media screen and (max-width: 479px)
+  .img_style
+    width: 19px
+    height: 19px
+
+  .camera_view
+    flex-wrap: wrap
+
+  video
+    max-width: 270px

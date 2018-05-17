@@ -1,0 +1,51 @@
+$border_color: #7f878a
+$input_background: #e8e1d7
+$error_message: red
+
+@import url('https://fonts.googleapis.com/css?family=Tajawal:400,700')
+
+.form_regist_position
+  display: none
+  position: absolute
+  top: 25%
+  left: 40%
+
+form
+  padding: 5% 5% 5% 5%
+  font-family: 'Tajawal', sans-serif
+
+input
+  height: 40px
+  width: 300px
+  background-color: $input_background
+  outline: none
+  border: none
+
+.form_regist_button
+  border: 1px solid $border_color
+
+.error_message_style
+  font-size: 0.8em
+  color: $error_message
+
+.success_reg_style
+  border: 1px solid $border_color
+  padding: 5% 5% 5% 5%
+  flex-direction: column
+  align-items: center
+  display: none
+
+.js_success_reg_block
+  display: block
+
+.js_success_reg_none
+  display: none
+
+.js_check_pass
+  display: none
+
+.js_check_mail
+  display: none
+
+.js_check_user
+  display: none

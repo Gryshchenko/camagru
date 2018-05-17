@@ -1,0 +1,108 @@
+sections.gallery 
+  div.user_show
+    p.user_text_style#user_connected
+  div.photo
+sections.profile_background
+sections.profile
+    div.prifle_data
+      div.link_close
+        p.title_profile Profile
+        a(href='#' onclick="coseProfile()").link_underline Close
+      div.profile_user
+        //-div.profile_user_info
+          p.text_margin Your login :
+            span#user_show
+          p.text_margin Your mail :
+            span#mail_show
+        div.profile_user_form
+          div._form_name
+            form#change_login
+              p
+                input(onchange='profile_close_error_message_login()', name='', required='required', type='text', placeholder='Username', pattern="[a-z]{1,15}").js_change_login
+              span.js_change_value_user_found.change_value_style A user already exists 
+              p
+                input(type='submit', name='Login', value='Change your login').button_border
+            div.change_value_sections.js_change_value_login
+              p.js_change_value_login_value Changes have been made successfully
+          div._form_mail
+            form#change_mail
+              p
+                input(onchange='profile_close_error_message_email()', name='', required='required', type='text', placeholder='Usermail', pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$").js_change_mail
+              span.js_change_value_mail_found.change_value_style This email already exists 
+              p
+                input(type='submit', name='Login', value='Change your mail').button_border
+            div.change_value_sections.js_change_value_mail
+              p Changes have been made successfully
+          div._form_pass
+            form#change_pass
+              p
+                input(onchange='profile_close_error_message_pass_old_not_found()', name='', required='required', type='password', placeholder='Old password').js_change_pass_old
+              span.js_change_value_pass_old_not_found.change_value_style Old password not found
+              p
+                input(onchange='profile_close_error_message_pass_not_found()', name='', required='required', type='password', placeholder='New password').js_change_pass_new
+              span.js_change_value_pass_not_found.change_value_style Password is not identical
+              p
+                input(onchange='profile_close_error_message_pass_not_eql()', name='', required='required', type='password', placeholder='Repeat new password').js_change_pass_rep
+              span.js_change_value_pass_not_eql.change_value_style Old and new password must be different
+              p
+                input(type='submit', name='Login', value='Change your password').button_border
+            div.change_value_sections.js_change_value_pass
+              p Changes have been made successfully
+sections.camera
+  div.camera_data
+    div.link_close
+      p.title_profile Camera
+      a(href='#' onclick="coseCamera()").link_underline Close
+    div.camera_view#container
+      div#video_container
+        video(autoplay='true')#videoElement
+        canvas#canvas
+      div.images
+        img(src='../img/actors_0.png').img_style
+        img(src='../img/actors_1.png').img_style
+        img(src='../img/ak-47.png').img_style
+        img(src='../img/beard_0.png').img_style
+        img(src='../img/beard_1.png').img_style
+        img(src='../img/beard_2.png').img_style
+        img(src='../img/beard_3.png').img_style
+        img(src='../img/beard_4.png').img_style
+        img(src='../img/beard_5.png').img_style
+        img(src='../img/bomb.png').img_style
+        img(src='../img/girls_0.png').img_style
+        img(src='../img/girls_1.png').img_style
+        img(src='../img/other_0.png').img_style
+        img(src='../img/other_1.png').img_style
+        img(src='../img/bow_0.png').img_style
+        img(src='../img/bow_1.png').img_style 
+        img(src='../img/cap_0.png').img_style
+        img(src='../img/cap_1.png').img_style
+        img(src='../img/cap_2.png').img_style
+        img(src='../img/cap_3.png').img_style
+        img(src='../img/hair_0.png').img_style
+        img(src='../img/hair_1.png').img_style 
+        img(src='../img/hair_2.png').img_style
+        img(src='../img/hair_3.png').img_style
+        img(src='../img/hair_4.png').img_style
+        img(src='../img/hair_5.png').img_style
+        img(src='../img/hair_6.png').img_style
+        img(src='../img/hair_7.png').img_style
+        img(src='../img/headphones_0.png').img_style
+        img(src='../img/headphones_1.png').img_style
+        img(src='../img/scar_0.png').img_style
+        img(src='../img/scar_1.png').img_style
+        img(src='../img/scar_2.png').img_style
+        img(src='../img/sheriff_0.png').img_style
+        img(src='../img/sheriff_1.png').img_style
+        img(src='../img/sheriff_2.png').img_style
+        img(src='../img/teeth_0.png').img_style  
+    div.control_button
+      a(href='#')#cameraOn.makephoto_button.makephoto_block Camera on
+      a(href='#')#cameraOff.makephoto_button.makephoto_none Camera off 
+      a(href='#')#makePhoto.makephoto_button.makephoto_none Make photo
+      a(href='#')#savePhoto.makephoto_button.makephoto_none Save photo
+      a(href='#')#makePhoto.makephoto_button.makephoto_none Make photo
+      a(href='#')#savePhoto.makephoto_button.makephoto_none Save photo
+      a(href='#')#increase.makephoto_button +
+      a(href='#')#decrease.makephoto_button -
+      a(href='#')#downloadPhoto.makephoto_button.makephoto_none Download
+      a(href='#')#remove.makephoto_button.makephoto_none Remove last

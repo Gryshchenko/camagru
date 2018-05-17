@@ -1,0 +1,20 @@
+div.form_regist_position#registrations
+  form(method='POST', autocomplete='on', id='registration').js_success_reg_block.form_border
+    h1 Registrations
+    p
+      input(name='usernamesignup', required, type='text', placeholder='Username', onchange='close_error_message_user()', pattern="[a-z]{1,15}").js_reg_user
+    span.js_check_user.error_message_style This user already registered
+    p 
+      input(name='emailsignup', required, type='email', placeholder='Yourmail@gmail.com', onchange='close_error_message_email()', pattern="^[a-zA-Z0-9.!#$%&’*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$").js_reg_email
+    span.js_check_mail.error_message_style This email already registered
+    p
+      input(name='passwordsignup', required, type='text', placeholder='eg. X8df!90EO', onchange='check_pass()').js_reg_pass
+    p
+      input(name='passwordsignup_confirm', required, type='text', placeholder='eg. X8df!90EO', onchange='check_pass()').js_reg_passrepeat
+    span.js_check_pass.error_message_style Passwords not equal
+    p
+      input(type='submit', name='Sing_up', value='Sign up').form_regist_button
+  div.js_success_reg.success_reg_style.js_success_reg_none
+    p Congratulations Your Registration Was Successful
+    p You only need to confirm your registration! 
+    p Click on the links you get on your mail
