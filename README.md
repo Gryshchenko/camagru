@@ -16,8 +16,6 @@ All requests for post-production on AJAX
 
 # User features
 
-![Alt text] (https://media.giphy.com/media/uBnTCTVrv3eWoDhtpZ/giphy.gif)
-
 • The application allow a user to sign up by asking at least a valid email
 address, an username and a password with at least a minimum level of complexity.
 • At the end of the registration process, an user should confirm his account via a
@@ -37,3 +35,9 @@ them and/or comment them.
 by email. This preference must can be set as true by default but can be deactivated in
 user’s preferences.
 • The list of images must be paginated, with at least 5 elements per page.
+
+![User registration](https://media.giphy.com/media/uBnTCTVrv3eWoDhtpZ/giphy.gif)
+
+![User login](https://media.giphy.com/media/g01e6Y7mSMGp8rb2ww/giphy.gif)
+
+![User change profile](https://media.giphy.com/media/BFsuMqomPlVScfME4X/giphy.gif)
