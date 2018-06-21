@@ -1,4 +1,4 @@
-# camagru
+# Camagru
 This web project to create a small web application allowing you to
 make basic photo and video editing using your webcam and some predefined images.
 
@@ -8,36 +8,43 @@ both pictures.
 
 All captured images is public, likeables and commentable.
 
-# Code
+#### For testing use:
+1. Login: test
+2. Password: Test12
 
-For client used clear javascript
-For back-end php
-All requests for post-production on AJAX
+## Code
 
-# User features
+1. For client used clear javascript
+2. For back-end php
+3. All requests for post-production on AJAX
 
-• The application allow a user to sign up by asking at least a valid email
+## User features
+
+1. • The application allow a user to sign up by asking at least a valid email
 address, an username and a password with at least a minimum level of complexity.
-• At the end of the registration process, an user should confirm his account via a
+2. • At the end of the registration process, an user should confirm his account via a
 unique link sent at the email address fullfiled in the registration form.
-• The user can to connect to application, using his username
+3. • The user can to connect to application, using his username
 and his password. He also can tell the application to send a password
 reinitialisation mail, if he forget his password.
-• The can be able to disconnect in one click at any time on any page.
-• Once connected, an user can modify his username, mail address or password.
+4. • The can be able to disconnect in one click at any time on any page.
+5. • Once connected, an user can modify his username, mail address or password.
 
-# Gallery features
+## Gallery features
 
-• This part is to be public and display all the images edited by all the users,
+1. • This part is to be public and display all the images edited by all the users,
 ordered by date of creation. It also only a connected user to like
 them and/or comment them.
-• When an image receives a new comment, the author of the image is be notified
+2. • When an image receives a new comment, the author of the image is be notified
 by email. This preference must can be set as true by default but can be deactivated in
 user’s preferences.
-• The list of images must be paginated, with at least 5 elements per page.
+3. • The list of images must be paginated, with at least 5 elements per page.
 
+### User registration
 ![User registration](https://media.giphy.com/media/uBnTCTVrv3eWoDhtpZ/giphy.gif)
-
+### User login
 ![User login](https://media.giphy.com/media/g01e6Y7mSMGp8rb2ww/giphy.gif)
-
+### User change profile
 ![User change profile](https://media.giphy.com/media/BFsuMqomPlVScfME4X/giphy.gif)
+### Camera
+![Camera](https://media.giphy.com/media/4WF4RAV8hspfABCqli/giphy.gif)
