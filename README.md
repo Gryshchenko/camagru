@@ -9,8 +9,9 @@ both pictures.
 All captured images is public, likeables and commentable.
 
 #### For testing use:
-1. Login: test
-2. Password: Test12
+1. https://conspirator.000webhostapp.com/
+2. Login: test
+3. Password: Test12
 
 ## Code
 
@@ -47,4 +48,4 @@ user’s preferences.
 ### User change profile
 ![User change profile](https://media.giphy.com/media/BFsuMqomPlVScfME4X/giphy.gif)
 ### Camera
-![Camera](https://media.giphy.com/media/4WF4RAV8hspfABCqli/giphy.gif)
+![Camera](/readme/camagru.camera.gif)
