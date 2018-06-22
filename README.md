@@ -21,25 +21,25 @@ All captured images is public, likeables and commentable.
 
 ## User features
 
-1. • The application allow a user to sign up by asking at least a valid email
+1. The application allow a user to sign up by asking at least a valid email
 address, an username and a password with at least a minimum level of complexity.
-2. • At the end of the registration process, an user should confirm his account via a
+2. At the end of the registration process, an user should confirm his account via a
 unique link sent at the email address fullfiled in the registration form.
-3. • The user can to connect to application, using his username
+3. The user can to connect to application, using his username
 and his password. He also can tell the application to send a password
 reinitialisation mail, if he forget his password.
-4. • The can be able to disconnect in one click at any time on any page.
-5. • Once connected, an user can modify his username, mail address or password.
+4. The can be able to disconnect in one click at any time on any page.
+5. Once connected, an user can modify his username, mail address or password.
 
 ## Gallery features
 
-1. • This part is to be public and display all the images edited by all the users,
+1. This part is to be public and display all the images edited by all the users,
 ordered by date of creation. It also only a connected user to like
 them and/or comment them.
-2. • When an image receives a new comment, the author of the image is be notified
+2. When an image receives a new comment, the author of the image is be notified
 by email. This preference must can be set as true by default but can be deactivated in
 user’s preferences.
-3. • The list of images must be paginated, with at least 5 elements per page.
+3. The list of images must be paginated, with at least 5 elements per page.
 
 ### User registration
 ![User registration](https://media.giphy.com/media/uBnTCTVrv3eWoDhtpZ/giphy.gif)
